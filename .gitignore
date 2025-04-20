@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+# Ignore every .pyc file in every folder
+*.pyo
+*.pyc
+# Existing rules
+
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual Environment
+venv/
+env/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
