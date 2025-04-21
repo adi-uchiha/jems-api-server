@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 def read_sql_file():
     """Read the schema.sql file"""
-    sql_file_path = Path(project_root) / 'sql' / 'schema.sql'
+    sql_file_path = Path(project_root) / 'sql' / 'new_schema.sql'
     with open(sql_file_path, 'r') as file:
         return file.read()
 
