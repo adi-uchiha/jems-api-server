@@ -6,7 +6,7 @@ from app.core.config import settings
 router = APIRouter()
 model = SentenceTransformer(settings.EMBEDDING_MODEL)
 
-@router.post("/encode", response_model=EncodeResponse)
+@router.post("/text", response_model=EncodeResponse)
 async def generate_embedding(request: EncodeRequest):
     """Generate text embedding using sentence transformer model"""
     try:

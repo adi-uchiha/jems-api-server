@@ -40,7 +40,7 @@ app.add_middleware(
 
 # # Include routers
 # app.include_router(auth.router, prefix="/api/auth", tags=["Authentication"])
-app.include_router(encode.router, prefix="/api", tags=["Encoding"])
+app.include_router(encode.router, prefix="/api/encode", tags=["Encoding"])
 
 if __name__ == "__main__":
 		print("🟢️ 🟢️ 🟢️ --- Starting JEMS api-server --- 🟢️ 🟢️ 🟢️")
