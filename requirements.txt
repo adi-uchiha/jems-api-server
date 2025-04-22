@@ -1,12 +1,32 @@
-fastapi
-python-jobspy
-pinecone
-sentence-transformers
-sqlalchemy
-sqlalchemy-libsql
-python-dotenv
-numpy
-requests
-beautifulsoup4
-pydantic
-uvicorn
+# Web Framework
+fastapi>=0.68.0
+uvicorn>=0.15.0
+
+# Database
+psycopg2-binary>=2.9.1
+redis>=4.0.0
+
+# Auth & Security
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+python-multipart>=0.0.5
+
+# Environment & Configuration
+python-dotenv>=0.19.0
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+
+# Machine Learning & Embeddings
+sentence-transformers>=2.2.0
+pinecone-client>=2.0.0
+
+# Task Queue
+celery>=5.3.0
+
+# HTTP & SSL
+requests>=2.26.0
+certifi>=2021.10.8
+
+# Utilities
+numpy>=1.21.0
+python-dateutil>=2.8.2
