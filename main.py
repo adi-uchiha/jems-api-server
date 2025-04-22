@@ -13,6 +13,7 @@ sys.path.insert(0, str(script_dir))
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from app.api import hello
 from app.api import encode
 from app.api import task  # Add this import
 from app.core.config import settings
@@ -40,6 +41,7 @@ app.add_middleware(
 )
 
 # # Include routers
+app.include_router(hello.router, tags=["Hello"])
 # app.include_router(auth.router, prefix="/api/auth", tags=["Authentication"])
 app.include_router(encode.router, prefix="/api/encode", tags=["Encoding"])
 app.include_router(task.router, prefix="/api/task", tags=["Tasks"])  # Add this line

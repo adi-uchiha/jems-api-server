@@ -1,40 +1,14 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "version": 2,
-  "buildCommand": "pip install -r requirements.txt",
-  "installCommand": "python -m pip install --upgrade pip",
-  "framework": null,
-  "functions": {
-    "main.py": {
-      "runtime": "@vercel/python@3.1.0",
-      "memory": 1024,
-      "maxDuration": 10
-    }
-  },
-  "regions": ["iad1"],
-  "headers": [
+  "builds": [
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        },
-        {
-          "key": "Access-Control-Allow-Methods", 
-          "value": "GET, POST, PUT, DELETE, OPTIONS"
-        },
-        {
-          "key": "Access-Control-Allow-Headers",
-          "value": "X-Requested-With, Content-Type, Accept, Authorization"
-        }
-      ]
+      "src": "main.py",
+      "use": "@vercel/python"
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/api/(.*)",
-      "destination": "main.py"
+      "src": "/(.*)",
+      "dest": "main.py"
     }
   ]
 }
